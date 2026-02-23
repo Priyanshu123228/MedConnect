@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedConnect - Affordable Medicines Platform</title>
+
+  <!-- Tailwind (single import for whole app) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#007f80",
+            "background-light": "#f5f8f8",
+            "background-dark": "#0f2323",
+            emergency: "#dc2626",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts & Icons (single import for whole app) -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+  />
+
+  <!-- App styles -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display"
+>
+  <!-- Global Shell -->
+  <div class="relative flex min-h-screen flex-col">
+    <!-- App Header / Navigation -->
+    <header
+      class="w-full border-b border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 py-4"
+      >
+        <div class="flex items-center gap-2 text-primary">
+          <span class="material-symbols-outlined text-3xl">medical_services</span>
+          <div class="flex flex-col">
+            <span class="text-lg md:text-xl font-bold tracking-tight">MedConnect</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">
+              Affordable medicines, safe choices
+            </span>
+          </div>
+        </div>
+
+        <nav class="flex items-center gap-3 md:gap-6 text-sm font-medium">
+          <button
+            class="app-nav-link"
+            data-route="home"
+          >
+            Home
+          </button>
+          <button
+            class="app-nav-link"
+            data-route="expiry"
+          >
+            Expiry Deals
+          </button>
+          <button
+            class="app-nav-link"
+            data-route="search"
+          >
+            Search Results
+          </button>
+          <button
+            class="app-nav-link"
+            data-route="interaction"
+          >
+            Interaction Checker
+          </button>
+          <button
+            class="app-nav-link"
+            data-route="alternatives"
+          >
+            Generic Alternatives
+          </button>
+          <button
+            class="app-nav-link text-red-600 dark:text-red-400"
+            data-route="sos"
+          >
+            Emergency SOS
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Route content -->
+    <main id="app-root" class="flex-1 flex flex-col"></main>
+
+    <!-- Background pattern (shared) -->
+    <div
+      class="fixed inset-0 -z-10 h-full w-full pointer-events-none opacity-[0.05] dark:opacity-[0.08]"
+    >
+      <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path
+              d="M 40 0 L 0 0 0 40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="0.5"
+            ></path>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-pattern)"></rect>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="app-toast-container" class="app-toast-container" aria-live="polite"></div>
+
+  <!-- Reusable Modal -->
+  <div id="app-modal" class="app-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="app-modal-title">
+    <div class="app-modal-backdrop" data-action="close-modal"></div>
+    <div class="app-modal-panel">
+      <div class="app-modal-header">
+        <h2 id="app-modal-title" class="app-modal-title"></h2>
+        <button type="button" class="app-modal-close" data-action="close-modal" aria-label="Close">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="app-modal-body"></div>
+      <div class="app-modal-footer">
+        <button type="button" class="app-modal-btn" data-action="close-modal">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- App entry (ES module – imports api, state, views, utils) -->
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
+

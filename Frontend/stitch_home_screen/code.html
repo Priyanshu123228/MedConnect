@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MedConnect - Expiry Deals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007f80",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f2323",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .grid-pattern {
+            background-image: radial-gradient(circle, #007f801a 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-3">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">medical_services</span>
+<h1 class="text-xl font-bold tracking-tight">MedConnect</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Medicine</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="#">Expiry Deals</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Pharmacy Finder</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-primary/5 rounded-lg px-3 py-1.5 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-primary/40" placeholder="Search medicines..." type="text"/>
+</div>
+<button class="p-2 hover:bg-primary/5 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center border border-primary/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile doctor avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaJ4w56rnnMyo2hjax4kKtSAIAM-l43q4TcwUCUF3czwqs47Crng27Xhw4R9w_d3RiYcm2swY-rXp-azMxDc0M8VAoT7ranH2-fULsr5_pK4SkpuxtR7E5iVtY6I6EJXk_zOygrP59WRIQs2xnlsTc6v6XuH5ZTsUbxQ-xByAR47GbYAsk6hNE1NUW7pgdaXtObf_Ejs9zhVTuFLk1DLOmEVuuJSkQYK4Br9_N7yrsiPnwk7jTDYn8DHIVNzI2hrbIP0fK9JKTIhY"/>
+</div>
+</div>
+</div>
+</header>
+<main class="grid-pattern">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 lg:px-20 pt-10 pb-6">
+<div class="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 overflow-hidden relative">
+<div class="flex-1 z-10 text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 dark:bg-emerald-800 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+<span class="material-symbols-outlined text-sm">eco</span>
+                        Sustainability Initiative
+                    </div>
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">Expiry Deals – Save Before It Expires</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl">Get safe, discounted medicines before expiry and reduce medical waste while supporting affordable healthcare for all.</p>
+</div>
+<div class="w-full md:w-1/3 aspect-video md:aspect-square bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-primary/5 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-90" data-alt="Assorted medicine capsules on white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAN9u5FzYvAJRXrBlptrTMHkXSBdAO5Z0hQeOKIfLJpDvOMz2DIfd05Xq7QjXCxBnDguz8A9db5xTXCr4QJtc4xN1f4sAQWn_ueGhlMt2V4Z-0gg1P9pOpzpI1NG8zhq3updnXga4Wm3ypu5pR-kAgDKh0hCsAWvKXaWb5an36UZcg_GO29w8-n5_xQ-c-qQsw_2Hddhoj6q0QcfEEXLZMBwYoteTUME37QFc_krvbVN7cGPeFG4UbgogCRIgO87Ok4cMQ9iSsBOs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-emerald-500/20 to-transparent"></div>
+</div>
+<!-- Abstract leaf pattern decoration -->
+<span class="material-symbols-outlined absolute -bottom-10 -right-10 text-[200px] text-emerald-500/10 rotate-12 select-none pointer-events-none">eco</span>
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="sticky top-[73px] z-40 bg-white/60 dark:bg-background-dark/60 backdrop-blur-md border-b border-primary/5 py-4">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 flex flex-wrap items-center gap-4">
+<div class="flex items-center gap-2 text-primary font-semibold text-sm mr-2">
+<span class="material-symbols-outlined text-xl">tune</span>
+                    Filter By:
+                </div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-primary/10 rounded-lg text-sm font-medium hover:border-primary transition-all">
+                        Expiry Period
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-primary/10 rounded-lg text-sm font-medium hover:border-primary transition-all">
+                        Discount %
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-primary/10 rounded-lg text-sm font-medium hover:border-primary transition-all">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                        Location
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<div class="ml-auto flex items-center gap-2">
+<span class="text-xs text-slate-500 font-medium">Sort by:</span>
+<select class="bg-transparent border-none text-sm font-semibold text-primary focus:ring-0 cursor-pointer">
+<option>Days Remaining</option>
+<option>Highest Discount</option>
+<option>Price: Low to High</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Medicine Grid -->
+<section class="max-w-7xl mx-auto px-6 lg:px-20 py-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Critical (Red) -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-red-100 dark:border-red-900/30 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col group">
+<div class="p-5 flex-1">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">Amoxicillin 500mg</h3>
+<p class="text-xs text-slate-500 font-medium uppercase tracking-tighter mt-1">Clavulanate Potassium</p>
+</div>
+<span class="bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">60% OFF</span>
+</div>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">$6.40</span>
+<span class="text-sm text-slate-400 line-through">$16.00</span>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Pharmacy</span>
+<span class="font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">local_pharmacy</span>
+                                    City Health Care
+                                </span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Expiry Date</span>
+<span class="font-semibold">Oct 25, 2023</span>
+</div>
+</div>
+<div class="bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800 rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-red-600 dark:text-red-400 uppercase">Expires in 12 Days</span>
+<span class="material-symbols-outlined text-red-500 text-sm">priority_high</span>
+</div>
+<div class="w-full bg-red-200 dark:bg-red-900/40 h-1.5 rounded-full overflow-hidden">
+<div class="bg-red-500 h-full w-[15%]"></div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700 flex gap-3">
+<button class="flex-1 py-2 text-sm font-semibold text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg hover:bg-slate-50 transition-colors">Details</button>
+<button class="flex-[2] py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:brightness-110 transition-all shadow-lg shadow-primary/20">Reserve Now</button>
+</div>
+</div>
+<!-- Card 2: Warning (Orange) -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-amber-100 dark:border-amber-900/30 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col group">
+<div class="p-5 flex-1">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">Atorvastatin 20mg</h3>
+<p class="text-xs text-slate-500 font-medium uppercase tracking-tighter mt-1">Lipid-lowering agent</p>
+</div>
+<span class="bg-amber-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">45% OFF</span>
+</div>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">$18.15</span>
+<span class="text-sm text-slate-400 line-through">$33.00</span>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Pharmacy</span>
+<span class="font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">local_pharmacy</span>
+                                    Wellness Hub
+                                </span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Expiry Date</span>
+<span class="font-semibold">Dec 05, 2023</span>
+</div>
+</div>
+<div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">Expires in 52 Days</span>
+<span class="material-symbols-outlined text-amber-500 text-sm">hourglass_empty</span>
+</div>
+<div class="w-full bg-amber-200 dark:bg-amber-900/40 h-1.5 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full w-[45%]"></div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700 flex gap-3">
+<button class="flex-1 py-2 text-sm font-semibold text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg hover:bg-slate-50 transition-colors">Details</button>
+<button class="flex-[2] py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:brightness-110 transition-all shadow-lg shadow-primary/20">Reserve Now</button>
+</div>
+</div>
+<!-- Card 3: Safe (Green) -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-emerald-100 dark:border-emerald-900/30 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col group">
+<div class="p-5 flex-1">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">Metformin 850mg</h3>
+<p class="text-xs text-slate-500 font-medium uppercase tracking-tighter mt-1">Antidiabetic medication</p>
+</div>
+<span class="bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">30% OFF</span>
+</div>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">$10.50</span>
+<span class="text-sm text-slate-400 line-through">$15.00</span>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Pharmacy</span>
+<span class="font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">local_pharmacy</span>
+                                    Green Cross Meds
+                                </span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Expiry Date</span>
+<span class="font-semibold">Feb 18, 2024</span>
+</div>
+</div>
+<div class="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase">Expires in 125 Days</span>
+<span class="material-symbols-outlined text-emerald-500 text-sm">check_circle</span>
+</div>
+<div class="w-full bg-emerald-200 dark:bg-emerald-900/40 h-1.5 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700 flex gap-3">
+<button class="flex-1 py-2 text-sm font-semibold text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg hover:bg-slate-50 transition-colors">Details</button>
+<button class="flex-[2] py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:brightness-110 transition-all shadow-lg shadow-primary/20">Reserve Now</button>
+</div>
+</div>
+<!-- Card 4: Multi-Pack (Green) -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-emerald-100 dark:border-emerald-900/30 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col group">
+<div class="p-5 flex-1">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">Ibuprofen 400mg</h3>
+<p class="text-xs text-slate-500 font-medium uppercase tracking-tighter mt-1">NSAID Pain Reliever</p>
+</div>
+<span class="bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">25% OFF</span>
+</div>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">$5.25</span>
+<span class="text-sm text-slate-400 line-through">$7.00</span>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Pharmacy</span>
+<span class="font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">local_pharmacy</span>
+                                    Corner Drugstore
+                                </span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Expiry Date</span>
+<span class="font-semibold">Mar 12, 2024</span>
+</div>
+</div>
+<div class="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase">Expires in 150+ Days</span>
+<span class="material-symbols-outlined text-emerald-500 text-sm">verified</span>
+</div>
+<div class="w-full bg-emerald-200 dark:bg-emerald-900/40 h-1.5 rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full w-[95%]"></div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700 flex gap-3">
+<button class="flex-1 py-2 text-sm font-semibold text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg hover:bg-slate-50 transition-colors">Details</button>
+<button class="flex-[2] py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:brightness-110 transition-all shadow-lg shadow-primary/20">Reserve Now</button>
+</div>
+</div>
+<!-- Card 5: Urgent (Orange) -->
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-amber-100 dark:border-amber-900/30 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col group">
+<div class="p-5 flex-1">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">Cetirizine 10mg</h3>
+<p class="text-xs text-slate-500 font-medium uppercase tracking-tighter mt-1">Antihistamine</p>
+</div>
+<span class="bg-amber-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">50% OFF</span>
+</div>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">$4.50</span>
+<span class="text-sm text-slate-400 line-through">$9.00</span>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Pharmacy</span>
+<span class="font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">local_pharmacy</span>
+                                    Relief Pharmacy
+                                </span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500">Expiry Date</span>
+<span class="font-semibold">Nov 15, 2023</span>
+</div>
+</div>
+<div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">Expires in 32 Days</span>
+<span class="material-symbols-outlined text-amber-500 text-sm">warning</span>
+</div>
+<div class="w-full bg-amber-200 dark:bg-amber-900/40 h-1.5 rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full w-[35%]"></div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700 flex gap-3">
+<button class="flex-1 py-2 text-sm font-semibold text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg hover:bg-slate-50 transition-colors">Details</button>
+<button class="flex-[2] py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:brightness-110 transition-all shadow-lg shadow-primary/20">Reserve Now</button>
+</div>
+</div>
+<!-- Load More Card (Ghost) -->
+<div class="border-2 border-dashed border-primary/20 rounded-xl flex flex-col items-center justify-center p-8 bg-primary/5 group cursor-pointer hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined text-4xl text-primary/40 group-hover:scale-110 transition-transform">add_circle</span>
+<p class="mt-4 font-bold text-primary">View More Deals</p>
+<p class="text-xs text-slate-500 mt-1">24 more items available</p>
+</div>
+</div>
+</section>
+<!-- Sustainability Footer Card -->
+<section class="max-w-7xl mx-auto px-6 lg:px-20 pb-20">
+<div class="bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+<div class="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/20">
+<span class="material-symbols-outlined text-3xl">recycling</span>
+</div>
+<div class="flex-1">
+<h4 class="text-xl font-bold text-primary mb-2">Every Purchase Makes a Difference</h4>
+<p class="text-slate-600 dark:text-slate-400">By purchasing near-expiry medicines, you help reduce medical waste and support affordable healthcare. Join our mission for a greener planet and healthier community.</p>
+</div>
+<button class="px-6 py-3 bg-white dark:bg-slate-800 border border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all whitespace-nowrap">
+                    Learn More
+                </button>
+</div>
+</section>
+</main>
+<footer class="bg-slate-900 text-slate-400 py-12 px-6 lg:px-20 border-t border-white/5">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 text-white mb-6">
+<span class="material-symbols-outlined text-3xl font-bold text-primary">medical_services</span>
+<h1 class="text-xl font-bold tracking-tight">MedConnect</h1>
+</div>
+<p class="max-w-sm mb-6">Empowering pharmacies and patients through smart, sustainable medicine management. Reducing waste, saving lives.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">public</span></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Resources</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Medicine Database</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pharmacy Login</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Regulatory Guidelines</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Waste Management</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Support</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-white/5 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
+<p>© 2023 MedConnect Sustainability Initiative. All rights reserved.</p>
+<div class="flex gap-8">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">language</span> English</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">shield</span> Secure Platform</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PharmCompare - Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007f80",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0f2323",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .animate-best-price {
+            animation: fadeInScale 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-primary/10 shadow-sm px-4 md:px-10 py-3">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+<div class="flex items-center gap-8 shrink-0">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">medical_services</span>
+<h1 class="text-xl font-bold tracking-tight">PharmCompare</h1>
+</div>
+<div class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Medicines</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Pharmacies</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Savings</a>
+</div>
+</div>
+<div class="flex-1 max-w-md hidden md:block">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60">search</span>
+<input class="w-full bg-primary/5 border-none rounded-lg pl-10 py-2 focus:ring-2 focus:ring-primary text-sm" placeholder="Search medicines or pharmacies..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold">2</span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-4 py-6 space-y-6">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-xs leading-none">chevron_right</span>
+<a class="hover:text-primary" href="#">Search</a>
+<span class="material-symbols-outlined text-xs leading-none">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">Paracetamol 500mg</span>
+</nav>
+<!-- Medicine Details Card -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-primary/10">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-5">
+<div class="w-20 h-20 bg-primary/5 rounded-lg flex items-center justify-center border border-primary/10">
+<span class="material-symbols-outlined text-4xl text-primary">pill</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<h2 class="text-2xl font-bold">Paracetamol 500mg</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Generic</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400">Salt Composition: <span class="text-slate-800 dark:text-slate-200 font-medium">Acetaminophen IP 500mg</span></p>
+<p class="text-sm flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm">info</span>
+                            Used for fever and mild to moderate pain relief
+                        </p>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 border-2 border-primary/20 hover:border-primary text-primary font-semibold px-4 py-2 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-lg">share</span>
+                    Share Details
+                </button>
+</div>
+</div>
+<!-- Pharmacy List Heading -->
+<div class="flex items-center justify-between px-1">
+<h3 class="text-lg font-bold">Available at 12 Pharmacies</h3>
+<div class="flex items-center gap-2 text-sm text-slate-500">
+<span>Sort by:</span>
+<button class="font-semibold text-primary flex items-center">Lowest Price <span class="material-symbols-outlined text-sm">expand_more</span></button>
+</div>
+</div>
+<!-- Pharmacy Cards List -->
+<div class="space-y-4">
+<!-- Best Price Option -->
+<div class="relative group animate-best-price">
+<div class="absolute -top-3 right-6 z-10 bg-[#22c55e] text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span>
+                    BEST PRICE
+                </div>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border-2 border-[#22c55e] shadow-md hover:shadow-lg transition-shadow">
+<div class="flex flex-col md:flex-row md:items-center gap-6">
+<div class="flex-1 space-y-3">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="text-lg font-bold">Apollo Pharmacy</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                                            1.2 km away
+                                        </span>
+<span class="flex items-center gap-1 text-sm text-[#22c55e] font-medium">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                                            In Stock
+                                        </span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-black text-slate-900 dark:text-slate-100 text-4xl">₹42.00</p>
+<p class="text-xs text-slate-400">per strip of 10</p>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-primary text-white px-6 py-2.5 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+                                    Add to Cart
+                                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 border border-primary/20 text-primary px-4 py-2.5 rounded-lg font-semibold hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-lg">map</span>
+                                    View Map
+                                </button>
+</div>
+</div>
+<div class="hidden md:block w-32 h-24 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-slate-700" data-alt="Modern pharmacy storefront with medical cross sign" data-location="New Delhi" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEa1DwRhzbpJhXN-HBLlVdvFvqSwfWZp3S6IIR5JF5SgeW0484noipEHlE6cH4ixeun9SuXZKukN8XGOQB2FX5votztrtdxHDKU3bTavH5gGdgDV9GZHwEQUwlQWYsLGDX3lkNueBGYxBl9BKE-fHKXOf25Gzp0ttz8eAMy8CfjY8lV3fJADXDuACPJwBEHiOCuK06hA0G710bLuqkEM4sq6PBg7M4J-vluI5aRB6P74ZLJb08_XjzFPvqOZjfaCRthGUQWwq3ea8');">
+</div>
+</div>
+</div>
+</div>
+<!-- Regular Option 2 -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col md:flex-row md:items-center gap-6">
+<div class="flex-1 space-y-3">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="text-lg font-bold">MedPlus Health Store</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                                        2.8 km away
+                                    </span>
+<span class="flex items-center gap-1 text-sm text-[#22c55e] font-medium">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                                        In Stock
+                                    </span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-900 dark:text-slate-100 text-3xl">₹48.50</p>
+<p class="text-xs text-slate-400">per strip of 10</p>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-primary text-white px-6 py-2.5 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+                                Add to Cart
+                            </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 border border-primary/20 text-primary px-4 py-2.5 rounded-lg font-semibold hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-lg">map</span>
+                                View Map
+                            </button>
+</div>
+</div>
+<div class="hidden md:block w-32 h-24 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-slate-700" data-alt="Interior of a medical supply store" data-location="Mumbai" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAt3u-FMXXYT9sQXHfQZMBDQpjPCtrtZHkO_HpP_it0YxJ6UJWdC1rNyU7saRrHJn5EdOsAXyaVy50vRj0CwEjFmDtNX4ig9pSoZM5PtKVX-4BMRLOfaxvqOcWCtvhHD4g5qjGP5YBa3ubhFO8iUiCGFS503QNwYmtk2rzy20iZaNFo9zMwhXPY9E1Z5hS2lsYmaCI3NPzpc6TSi7JkcjiazsMf6VYEmc3wMJVpaMBbR3ss5V-P76dUPNDgnYmVLKTfWTrDN-1QZnk');">
+</div>
+</div>
+</div>
+<!-- Regular Option 3 -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col md:flex-row md:items-center gap-6">
+<div class="flex-1 space-y-3">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="text-lg font-bold">Wellness Forever</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                                        4.1 km away
+                                    </span>
+<span class="flex items-center gap-1 text-sm text-orange-500 font-medium">
+<span class="material-symbols-outlined text-sm">history</span>
+                                        Limited Stock
+                                    </span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-900 dark:text-slate-100 text-3xl">₹52.00</p>
+<p class="text-xs text-slate-400">per strip of 10</p>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-primary text-white px-6 py-2.5 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+                                Add to Cart
+                            </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 border border-primary/20 text-primary px-4 py-2.5 rounded-lg font-semibold hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-lg">map</span>
+                                View Map
+                            </button>
+</div>
+</div>
+<div class="hidden md:block w-32 h-24 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-slate-700" data-alt="Brightly lit apothecary shelves with products" data-location="Bangalore" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGFy6HJ0oKcW4mA45jJAW3eRq5zhH1F68JkiyMMexU9itCjgJVuCZj5FC7YDa9iL1HcP4HMiw5CsbGGokKnEC-YC4UdrDxpUKj1ULtNV4F2-_2pjc4fcOwoKCpqvIQYIpz6iBhQB_mZHixE3scVqanp0ilNOAFXtCtb_eYDq5adpgSwmE0OZT0lG-2acMCv8-wvd7CDckHbWbCBqwcxtXIskc33x7zGO3sbd-BELRgwZzg8NlzjAI4F27qS-Gx5dZ7olG7jfevkKA');">
+</div>
+</div>
+</div>
+</div>
+<!-- Savings Banner -->
+<div class="bg-[#22c55e] rounded-xl p-8 text-white shadow-xl overflow-hidden relative">
+<div class="absolute -right-10 -bottom-10 opacity-20">
+<span class="material-symbols-outlined text-[120px]">savings</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="space-y-2">
+<p class="text-sm font-bold opacity-90 tracking-widest uppercase">Smart Choice</p>
+<h2 class="text-4xl font-black">You save ₹85 by choosing Generic.</h2>
+<p class="text-white/80 max-w-lg">Generic medicines have the same therapeutic effect as branded ones but cost significantly less.</p>
+</div>
+<button class="bg-white text-[#22c55e] px-8 py-3 rounded-lg font-black text-lg hover:bg-white/90 transition-all shadow-lg active:scale-95 whitespace-nowrap">
+                    Confirm Selection
+                </button>
+</div>
+</div>
+<!-- Bottom Spacing -->
+<div class="h-10"></div>
+</main>
+<!-- Simple Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-primary/10 py-10">
+<div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl font-bold">medical_services</span>
+<h1 class="text-lg font-bold tracking-tight">PharmCompare</h1>
+</div>
+<p class="text-sm text-slate-500">Helping you find the best medical prices across thousands of verified local pharmacies.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold">Support</h4>
+<ul class="text-sm text-slate-500 space-y-2">
+<li><a class="hover:text-primary" href="#">How it works</a></li>
+<li><a class="hover:text-primary" href="#">Partner with us</a></li>
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold">Contact</h4>
+<p class="text-sm text-slate-500 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>
+                    support@pharmcompare.com
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">share_location</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
