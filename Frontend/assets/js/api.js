@@ -6,7 +6,7 @@
 const API_BASE =
   typeof window !== "undefined" && window.__MEDCONNECT_API__
     ? window.__MEDCONNECT_API__
-    : "http://localhost:5000/api";
+    : "https://medconnect-backend-1pks.onrender.com/api";
 
 /**
  * API error with status code for optional UI handling
